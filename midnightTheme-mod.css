@@ -1,0 +1,163 @@
+/* Importa tu base (midnight o la que uses) */
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+
+/* ========== VARIABLES COMUNES ========== */
+:root {
+    /* fuentes y tamaños */
+    --font: 'figtree';
+    --code-font: '';
+    font-weight: 400;
+    
+    --gap: 12px;
+    --divider-thickness: 4px;
+    --border-thickness: 1px;
+    
+    --animations: on;
+    --list-item-transition: 0.2s ease;
+    --dms-icon-svg-transition: 0.4s ease;
+    --border-hover-transition: 0.2s ease;
+    
+    --top-bar-height: var(--gap);
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: off;
+    
+    --custom-window-controls: on;
+    --window-control-size: 14px;
+    
+    --custom-dms-icon: custom;
+    --dms-icon-svg-url: url('https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg');
+    --dms-icon-svg-size: 90%;
+    --dms-icon-color-before: var(--icon-secondary);
+    --dms-icon-color-after: var(--white);
+    --custom-dms-background: off;
+    --dms-background-image-url: url('');
+    --dms-background-image-size: cover;
+    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2));
+    
+    --background-image: off;
+    --background-image-url: url('');
+    
+    --transparency-tweaks: off;
+    --remove-bg-layer: off;
+    --panel-blur: off;
+    --blur-amount: 12px;
+    --bg-floating: var(--bg-3);
+    
+    --custom-chatbar: aligned;
+    --chatbar-height: 47px;
+    --chatbar-padding: 8px;
+    
+    --small-user-panel: on;
+    
+    /* tu gama naranja como accent */
+    --orange-1: rgb(236, 139, 73);
+    --orange-2: rgb(218, 112, 44);
+    --orange-3: rgb(203, 97, 32);
+}
+
+/* ========== MODO CLARO (DEFAULT) ========== */
+.theme-light {
+    --colors: on;
+
+    /* colores */
+    --purple-2: rgb(139, 126, 200);
+    --red-2: rgb(209, 77, 65);
+    --yellow-2: rgb(208, 162, 21);
+    --green-2: rgb(58, 169, 159);
+    
+    
+    /* textos en modo claro */
+    --text-0: var(--bg-4);
+    --text-1: #100F0F;
+    --text-2: rgb(28, 27, 26);
+    --text-3: rgb(40, 39, 38);
+    --text-4: rgb(52, 51, 49);
+    --text-5: rgb(64, 62, 60);
+    
+    /* fondos claros */
+    --bg-1: #FFFCF0;
+    --bg-2: #F2F0E5;
+    --bg-3: #F2F0E5;
+    --bg-4: #FFFCF0;
+    
+    /* hovers y actives */
+    --hover: hsla(220, 15%, 10%, 0.05);
+    --active: hsla(220, 15%, 10%, 0.1);
+    --active-2: hsla(220, 15%, 10%, 0.15);
+    --message-hover: hsla(220, 0%, 0%, 0.03);
+    
+    /* accents */
+    --accent-1: var(--orange-1);
+    --accent-2: var(--orange-2);
+    --accent-3: var(--orange-3);
+    --accent-4: var(--orange-3);
+    --accent-5: var(--orange-3);
+    --accent-new: var(--orange-2);
+    
+    --mention: linear-gradient(to right, color-mix(in srgb, var(--orange-2), transparent 90%) 40%, transparent);
+    --mention-hover: linear-gradient(to right, color-mix(in srgb, var(--orange-2), transparent 95%) 40%, transparent);
+    --reply: linear-gradient(to right, color-mix(in srgb, var(--text-3), transparent 90%) 40%, transparent);
+    --reply-hover: linear-gradient(to right, color-mix(in srgb, var(--text-3), transparent 95%) 40%, transparent);
+    
+    /* status y bordes */
+    --online: var(--green-2);
+    --dnd: var(--red-2);
+    --idle: var(--yellow-2);
+    --streaming: var(--purple-2);
+    --offline: var(--text-4);
+    
+    --border-light: var(--hover);
+    --border: var(--active);
+    --border-hover: var(--active);
+    --button-border: hsla(220, 15%, 10%, 0.1);
+}
+
+/* ========== MODO OSCURO ========== */
+.theme-dark {
+    --colors: on;
+    
+    /* textos claros */
+    --text-0: var(--bg-4);
+    --text-1: hsl(220, 45%, 95%);
+    --text-2: hsl(220, 25%, 70%);
+    --text-3: hsl(220, 20%, 60%);
+    --text-4: hsl(220, 15%, 40%);
+    --text-5: hsl(220, 15%, 25%);
+    
+    /* fondos oscuros */
+    --bg-1: hsla(220, 15%, 20%, 1);
+    --bg-2: hsla(220, 15%, 16%, 1);
+    --bg-3: hsla(220, 15%, 13%, 1);
+    --bg-4: hsla(220, 15%, 10%, 1);
+    
+    --hover: hsla(221, 19%, 40%, 0.1);
+    --active: hsla(220, 19%, 40%, 0.2);
+    --active-2: hsla(220, 19%, 40%, 0.3);
+    --message-hover: hsla(220, 0%, 0%, 0.1);
+    
+    /* accents con naranja */
+    --accent-1: var(--orange-1);
+    --accent-2: var(--orange-2);
+    --accent-3: var(--orange-3);
+    --accent-4: var(--orange-3);
+    --accent-5: var(--orange-3);
+    --accent-new: var(--orange-2);
+    
+    --mention: linear-gradient(to right, color-mix(in srgb, var(--orange-2), transparent 90%) 40%, transparent);
+    --mention-hover: linear-gradient(to right, color-mix(in srgb, var(--orange-2), transparent 95%) 40%, transparent);
+    --reply: linear-gradient(to right, color-mix(in srgb, var(--text-3), transparent 90%) 40%, transparent);
+    --reply-hover: linear-gradient(to right, color-mix(in srgb, var(--text-3), transparent 95%) 40%, transparent);
+    
+    /* status y bordes */
+    --online: var(--green-2);
+    --dnd: var(--red-2);
+    --idle: var(--yellow-2);
+    --streaming: var(--purple-2);
+    --offline: var(--text-4);
+    
+    --border-light: var(--hover);
+    --border: var(--active);
+    --border-hover: var(--active);
+    --button-border: hsla(0, 0%, 100%, 0.1);
+}
