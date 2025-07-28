@@ -161,3 +161,8 @@
     --border-hover: var(--active);
     --button-border: hsla(0, 0%, 100%, 0.1);
 }
+
+/*Force light color on appearance menu*/
+.lightIcon__36dee{
+    background: #FFFCF0 !important;
+}
