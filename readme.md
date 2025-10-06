@@ -14,6 +14,6 @@ Light theme is built with the [flexoki](https://stephango.com/flexoki) light sch
 
 ## Installation
 
-I use *"Edit Quick CSS"* option on vencord to apply the theme. 
+I use *"Settings/Vencord/Themes/Edit Quick CSS"* option on vencord to apply the theme. 
 
 Just copy/paste `midnightTheme-mod.css` content into it.
